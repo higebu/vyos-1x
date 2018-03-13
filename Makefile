@@ -18,3 +18,7 @@ all: interface_definitions
 .PHONY: clean
 clean:
 	rm -rf $(TMPL_DIR)/*
+
+.PHONY: test
+test:
+	python -m unittest -v tests/test_*

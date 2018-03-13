@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!-- cloud-init configuration -->
+
+<interfaceDefinition>
+  <node name="service">
+    <children>
+      <node name="cloud-init" owner="${vyos_sbindir}/vyos-cloud-init.py">
+        <properties>
+          <help>cloud-init settings</help>
+        </properties>
+        <children>
+          <leafNode name="environment">
+            <properties>
+              <help>Environment</help>
+            </properties>
+          </leafNode>
+          <leafNode name="ssh-key">
+            <properties>
+              <help>SSH Key URL</help>
+            </properties>
+          </leafNode>
+          <leafNode name="ssh-user">
+            <properties>
+              <help>SSH User</help>
+            </properties>
+          </leafNode>
+          <leafNode name="user-data">
+            <properties>
+              <help>User Data URL</help>
+            </properties>
+          </leafNode>
+        </children>
+      </node>
+    </children>
+  </node>
+</interfaceDefinition>
